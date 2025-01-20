@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background-color: #1A1A40; /* Deep royal blue */
+    color: #fff;
+}
+
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.Calculator {
+    background: linear-gradient(145deg, #800020, #4B0015); /* Luxurious maroon gradient */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(255, 255, 255, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid gold;
+}
+
+
+.Calculator h1 {
+    font-size: 28px;
+    color: gold;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), -3px -3px 6px rgba(255, 255, 255, 0.2);
+}
+
+
+.input-info label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #D1C4E9; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-info input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 20px;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.input-info input[type="date"]:focus {
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.6), inset 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-info button {
+    background: gold;
+    color: #1A1A40;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-info button:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5), -6px -6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.input-info button:active {
+    transform: translateY(2px);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.2);
+}
+
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #F8E8C1; /* Light gold */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
