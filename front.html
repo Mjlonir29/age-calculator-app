@@ -7,21 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="screen">
-    <div class="Calculator">
-        <h1><center>Age & Countdown Calculator</center></h1>
-        <div class="input-info">
-            <label for="inputd">DATE OF BIRTH / FUTURE DATE</label>
-            <br>
-            <input type="date" id="inputd">
-            <br>
-            <center>
-                <button onclick="calculateDateDifference()">Calculate</button>
-            </center>
-        </div>
-        <p id="result"></p>
+    
+    <div class="background">
+        
+        <div class="circle"></div>
+        <div class="circle-small"></div>
+
+        
+        <div class="square"></div>
+        <div class="square-large"></div>
+
+        
+        <div class="line"></div>
+        <div class="line-small"></div>
     </div>
-</div>
-<script src="script.js"></script>
+
+    
+    <div class="screen">
+        <div class="Calculator">
+            <h1><center>Age & Countdown Calculator</center></h1>
+            <div class="input-info">
+                <label for="inputd">DATE OF BIRTH / FUTURE DATE</label>
+                <br>
+                <input type="date" id="inputd">
+                <br>
+                <center>
+                    <button onclick="calculateDateDifference()">Calculate</button>
+                </center>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
