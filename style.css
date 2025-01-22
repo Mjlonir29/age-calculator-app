@@ -1,8 +1,125 @@
 body {
     margin: 0;
-    font-family: 'Roboto Mono', monospace; 
-    background-color: #0D1117; 
-    color: #C9D1D9; 
+    font-family: 'Roboto Mono', monospace;
+    background-color: #0D1117;
+    color: #C9D1D9;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background .circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #8F00FF;
+    border-radius: 50%;
+    top: 20%;
+    left: 10%;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.background .circle-small {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #0EF9F9;
+    border-radius: 50%;
+    bottom: 30%;
+    right: 15%;
+    opacity: 0.4;
+    animation: float-reverse 7s ease-in-out infinite;
+}
+
+.background .square {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #0EF9F9;
+    top: 60%;
+    left: 70%;
+    opacity: 0.3;
+    transform: rotate(45deg);
+    animation: float 8s ease-in-out infinite;
+}
+
+.background .square-large {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #8F00FF;
+    top: 10%;
+    right: 10%;
+    opacity: 0.2;
+    transform: rotate(45deg);
+    animation: float-reverse 9s ease-in-out infinite;
+}
+
+.background .line {
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(180deg, #8F00FF, transparent);
+    top: 50%;
+    left: 20%;
+    opacity: 0.5;
+    animation: slide 5s linear infinite;
+}
+
+.background .line-small {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(180deg, #0EF9F9, transparent);
+    bottom: 10%;
+    right: 25%;
+    opacity: 0.7;
+    animation: slide-reverse 6s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+@keyframes float-reverse {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(20px) rotate(-10deg);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes slide-reverse {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50px);
+    }
 }
 
 .screen {
@@ -14,14 +131,14 @@ body {
 }
 
 .Calculator {
-    background: linear-gradient(145deg, #21262D, #30363D); 
+    background: linear-gradient(145deg, #21262D, #30363D);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7), -8px -8px 20px rgba(255, 255, 255, 0.1);
     max-width: 450px;
     width: 100%;
     text-align: center;
-    border: 2px solid #0EF9F9; 
+    border: 2px solid #0EF9F9;
 }
 
 .Calculator h1 {
@@ -53,24 +170,8 @@ body {
     margin-bottom: 20px;
     box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.05), inset 4px 4px 8px rgba(0, 0, 0, 0.4);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
-    cursor: pointer; 
-    border: 1px solid #8F00FF; 
-}
-
-.input-info input[type="date"]:focus {
-    outline: none;
-    transform: scale(1.02);
-    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.5);
-    border: 2px solid #8F00FF;
-}
-
-.input-info input[type="date"]:active {
-    transform: scale(1.02);
-    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-.input-info input[type="date"]:hover {
     cursor: pointer;
+    border: 1px solid #8F00FF;
 }
 
 .input-info button {
@@ -86,33 +187,10 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.input-info button:hover {
-    transform: translateY(-4px);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5), -6px -6px 15px rgba(255, 255, 255, 0.3);
-}
-
-.input-info button:active {
-    transform: translateY(2px);
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -2px -2px 5px rgba(255, 255, 255, 0.2);
-}
-
 #result {
     font-size: 20px;
     margin-top: 20px;
-    color: #0EF9F9; 
+    color: #0EF9F9;
     font-weight: bold;
     text-shadow: 0 0 10px #0EF9F9, 0 0 20px #0EF9F9;
-}
-
-#result span {
-    color: #8EF9F9; 
-    font-size: 22px;
-    text-shadow: 0 0 10px #8EF9F9, 0 0 20px #8EF9F9;
-}
-
-.Calculator p {
-    font-size: 16px;
-    color: #8B949E;
-    margin-top: 10px;
-    font-style: italic;
 }
